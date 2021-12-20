@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitorowanie czasu</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="shortcut icon" type="image/jpg" href="assets/favicon.png" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <a class="logo" href="index.html"
+        ><img class="logo-image" src="assets/logo.png" alt="logo"
+      /></a>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="" class="menu__link">O nas</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Usługi</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Aktualności</a>
+          </li>
+          <li class="menu__item menu__item--contact">
+            <a href="" class="menu__link menu__link--contact">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide slide-1"></div>
+        <div class="swiper-slide slide-2"></div>
+        <div class="swiper-slide slide-3"></div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <section class="about">
+      <h2 class="about-company">
+        OK<span class="about-comapny-tacho">Tacho</span> - Kompleksowe
+        rozliczanie czasu pracy kierowców i usługi dla firm transportowych.
+        <br />
+        <span class="about-company-offer">Nasza oferta:</span>
+      </h2>
+
+      <div class="element">
+        <div class="svg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+            class="svg__link"
+          >
+            <g id="Layer_43" data-name="Layer 43">
+              <path
+                d="M42.61,56.84C25.25,64.56,4.71,51,5,32a27,27,0,1,1,53.73,3.86A1,1,0,0,0,59.57,37a1,1,0,0,0,1.14-.85C63.32,18.88,49.48,2.86,32,3A29,29,0,0,0,3,32C2.69,52.44,24.74,67,43.39,58.68A1,1,0,0,0,42.61,56.84Z"
+              />
+              <path d="M33,8a1,1,0,0,0-2,0v3a1,1,0,0,0,2,0Z" />
+              <path
+                d="M48.26,14.32l-2.12,2.12a1,1,0,0,0,1.42,1.42l2.12-2.12A1,1,0,0,0,48.26,14.32Z"
+              />
+              <path d="M53,31a1,1,0,0,0,0,2h3a1,1,0,0,0,0-2Z" />
+              <path
+                d="M32,52a1,1,0,0,0-1,1v3a1,1,0,0,0,2,0V53A1,1,0,0,0,32,52Z"
+              />
+              <path
+                d="M16.44,46.14l-2.12,2.12a1,1,0,0,0,1.42,1.42l2.12-2.12A1,1,0,0,0,16.44,46.14Z"
+              />
+              <path d="M8,31a1,1,0,0,0,0,2h3a1,1,0,0,0,0-2Z" />
+              <path
+                d="M17.86,16.44l-2.12-2.12a1,1,0,0,0-1.42,1.42l2.12,2.12A1,1,0,0,0,17.86,16.44Z"
+              />
+              <path
+                d="M33,16a1,1,0,0,0-2,0V31H22a1,1,0,0,0,0,2H32a1,1,0,0,0,1-1Z"
+              />
+              <path
+                d="M59.47,44.51,58,44.36c1.47-1.09,2.37-1.65,1.08-3.45-.7-1.24-2.15-.43-3.1,0,.74-1.66,1.19-2.57-.79-3.48-1.24-.74-2.09.7-2.7,1.55-.18-1.82-.21-2.88-2.41-2.69-1.49,0-1.46,1.7-1.59,2.76l-.53.17c-.69-.8-1.66-2.25-2.87-1.4-1.92,1.08-1.35,2-.5,3.58-1.71-.65-2.67-1.08-3.46,1-.65,1.31.81,2,1.71,2.6-1.05.19-2.68.28-2.59,1.74-.07,2.19,1,2.16,2.79,2.28-1.42,1.13-2.24,1.73-.91,3.45.79,1.24,2.16.35,3.12-.13-.38,1-1.14,2.45.17,3.11,1.86,1.18,2.38.26,3.37-1.27.17,1,.22,2.64,1.64,2.62,2.24.1,2.24-.88,2.35-2.78,1.12,1.45,1.7,2.33,3.47,1,1.25-.77.38-2.16-.08-3.12,1,.4,2.43,1.18,3.12-.11,1.23-1.85.29-2.38-1.23-3.39,1.06-.15,2.71-.17,2.68-1.64C60.82,45.77,60.61,44.62,59.47,44.51Zm-7-5.5ZM52.8,53.9Zm3.35-2.11Zm1.6-4.9a1.47,1.47,0,0,0-.64,2.6l1.23.89L58,51c-.9-.33-2.17-1.15-3-.17s0,2.09.37,3l-.57.35c-.64-.73-1.31-2.06-2.52-1.62s-1,1.81-1.13,2.74l-.67,0c-.19-1-.12-2.45-1.4-2.66s-1.77,1.07-2.33,1.83l-.59-.31c.3-.91,1.1-2.2.11-3s-2.09.06-2.94.44L43,51c.71-.64,2-1.36,1.58-2.54s-1.82-1-2.77-1.09l0-.67c1-.21,2.44-.17,2.63-1.44s-1.11-1.77-1.87-2.3l.29-.61c.92.29,2.21,1.06,3,.06s-.08-2.08-.48-2.93l.56-.38c.92,1.06,1.49,2.09,3.06,1.38,1.19-.26,1.08-1.77,1.23-2.7h.67c.15,1,0,2.44,1.28,2.71s1.82-1,2.41-1.73l.58.33c-.34.9-1.18,2.14-.23,3s2.08.05,3-.3l.34.57c-.74.63-2.09,1.27-1.67,2.5s1.79,1,2.72,1.18l0,.67Zm.19-2.54Z"
+              />
+              <path
+                d="M50.5,41.26c-6.93.22-6.93,10.27,0,10.49C57.43,51.53,57.43,41.48,50.5,41.26Zm0,9c-4.94-.13-4.93-7.36,0-7.49A3.75,3.75,0,0,1,50.5,50.25Z"
+              />
+            </g>
+          </svg>
+        </div>
+        <h2 class="title">Ewidencja czasu pracy</h2>
+        <p class="description">
+          Tworzenie i przechowywanie pełnej ewidencji czasu pracy na podstawie
+          danych z tachografu i karty kierowcy oraz dokumentacji uzupełniającej
+          (urlopy, nieobecności, choroby). Odczyt danych z pojazdów.
+        </p>
+
+        <p class="show-more">Zobacz więcej →</p>
+      </div>
+
+      <div class="element">
+        <div class="svg">
+          <svg
+            class="svg__money"
+            version="1.1"
+            id="Icons"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 32 32"
+            style="enable-background: new 0 0 32 32"
+            xml:space="preserve"
+          >
+            <style type="text/css">
+              .st0 {
+                fill: none;
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-miterlimit: 10;
+              }
+            </style>
+            <path
+              class="st0"
+              d="M3,25l2.6-4.2c1.5-2.3,4-3.8,6.8-3.8H19v0c0,2.2-1.8,4-4,4h-2"
+            />
+            <path
+              class="st0"
+              d="M15,21h8l1.2-1.6c1.1-1.5,2.9-2.4,4.8-2.4h0l-2.7,4.8c-1.4,2.6-4.2,4.2-7.1,4.2h0c-4.7,0-9.3,1.4-13.2,4l0,0"
+            />
+            <rect x="5" y="2" class="st0" width="22" height="12" />
+            <path class="st0" d="M27,6c-2.2,0-4-1.8-4-4" />
+            <path class="st0" d="M5,10c2.2,0,4,1.8,4,4" />
+            <circle class="st0" cx="16" cy="8" r="3" />
+            <path class="st0" d="M9,2c0,2.2-1.8,4-4,4" />
+            <path class="st0" d="M27,10c-2.2,0-4,1.8-4,4" />
+          </svg>
+        </div>
+        <h2 class="title">Rozliczanie wynagrodzeń kierowców</h2>
+        <p class="description">
+          Z uwzględnieniem wszystkich składników wynagrodzenia: godzin
+          podstawowych, nadgodzin, dyżuru i pracy w godzinach nocnych - zgodnie
+          z prawem pracy.
+        </p>
+        <p class="show-more">Zobacz więcej →</p>
+      </div>
+
+      <div class="element">
+        <div class="svg">
+          <svg
+            version="1.1"
+            id="police-11"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 11 11"
+          >
+            <path
+              id="circle4929"
+              d="M4.5,0.5l0.5,1h3&#xA;&#x9;l0.5-1H4.5z M5,2v1c0,0.8284,0.6716,1.5,1.5,1.5S8,3.8284,8,3V2H5z M1.75,3C1,3,1,3.75,1,3.75v3&#xA;&#x9;c0.0006,0.506,0.4918,0.8663,0.9746,0.7148L4,6.8262V10l4-5H5c0,0-0.1945,0-0.4238,0.0723L2.5,5.7266V3.75C2.5,3.75,2.5,3,1.75,3z&#xA;&#x9; M8.7715,5.3887L5,10h4V6C9,5.7648,8.9064,5.5591,8.7715,5.3887z"
+            />
+          </svg>
+        </div>
+        <h2 class="title">Kontrola wykroczeń</h2>
+        <p class="description">
+          Analiza kar i naruszeń przepisów o czasie pracy kierowcy, tworzenie
+          raportów dot. wysokości mandatów GITD i Inspekcji Pracy oraz upomnień
+          dla kierowców
+        </p>
+        <p class="show-more">Zobacz więcej →</p>
+      </div>
+
+      <div class="element">
+        <div class="svg">
+          <svg
+            viewBox="0 0 22 15"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <g
+              id="Icons"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <g id="Outlined" transform="translate(-543.000000, -3171.000000)">
+                <g id="Maps" transform="translate(100.000000, 3068.000000)">
+                  <g
+                    id="Outlined-/-Maps-/-local_hotel"
+                    transform="translate(442.000000, 98.000000)"
+                  >
+                    <g>
+                      <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                      <path
+                        class="svg__link"
+                        d="M7,14 C8.66,14 10,12.66 10,11 C10,9.34 8.66,8 7,8 C5.34,8 4,9.34 4,11 C4,12.66 5.34,14 7,14 Z M7,10 C7.55,10 8,10.45 8,11 C8,11.55 7.55,12 7,12 C6.45,12 6,11.55 6,11 C6,10.45 6.45,10 7,10 Z M19,7 L11,7 L11,15 L3,15 L3,5 L1,5 L1,20 L3,20 L3,17 L21,17 L21,20 L23,20 L23,11 C23,8.79 21.21,7 19,7 Z M21,15 L13,15 L13,9 L19,9 C20.1,9 21,9.9 21,11 L21,15 Z"
+                        id="🔹-Icon-Color"
+                        fill="#1D1D1D"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <h2 class="title">Rozliczanie kosztów podróży służbowych</h2>
+        <p class="description">
+          Obliczanie należnych diet i ryczałtów za nocleg za pracę w delegacji w
+          kraju i za granicą.
+        </p>
+        <p class="show-more">Zobacz więcej →</p>
+      </div>
+
+      <div class="element">
+        <div class="svg">
+          <svg
+            version="1.0"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="64px"
+            height="64px"
+            viewBox="0 0 64 64"
+            enable-background="new 0 0 64 64"
+            xml:space="preserve"
+          >
+            <path
+              class="svg__color"
+              fill="none"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              d="M53.92,10.081c12.107,12.105,12.107,31.732,0,43.838
+	c-12.106,12.108-31.734,12.108-43.839,0c-12.107-12.105-12.107-31.732,0-43.838C22.186-2.027,41.813-2.027,53.92,10.081z"
+            />
+            <path
+              class="svg__color"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              d="M42,43c0,0-1,4-10,4s-12-7-12-15s3-15,12-15
+	s10,4,10,4"
+            />
+            <line
+              class="svg__color"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              x1="15"
+              y1="30"
+              x2="34"
+              y2="30"
+            />
+            <line
+              class="svg__color"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              x1="15"
+              y1="34"
+              x2="34"
+              y2="34"
+            />
+          </svg>
+        </div>
+        <h2 class="title">Płaca minimalna kierowcy w UE</h2>
+        <p class="description">
+          Obliczanie należnego wynagrodzenia za pracę na terenie państw
+          Wspólnoty Europejskiej, Obsługa zgłoszeń kierowców do systemu IMI.
+        </p>
+        <p class="show-more">Zobacz więcej →</p>
+      </div>
+
+      <div class="element">
+        <div class="svg">
+          <svg
+            class="svg__link"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 512 512"
+            style="enable-background: new 0 0 512 512"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <path
+                  d="M449.393,0H62.607C45.894,0,32.298,13.597,32.298,30.309v451.381c0,16.713,13.597,30.309,30.309,30.309h386.786
+             c16.713,0,30.309-13.597,30.309-30.309V30.309C479.702,13.597,466.106,0,449.393,0z M56.545,30.309
+             c0-3.342,2.719-6.062,6.062-6.062h386.786c3.342,0,6.062,2.719,6.062,6.062v105.1H56.545V30.309z M173.35,487.751H62.607
+             c-3.342,0.001-6.062-2.719-6.062-6.061V335.796H173.35V487.751z M173.35,311.549H56.545V159.657H173.35V311.549z M314.402,487.753
+             H197.597V335.796h116.805V487.753z M314.402,311.549H197.597V159.657h116.805V311.549z M455.455,481.69
+             c0,3.342-2.721,6.063-6.062,6.063H338.649V159.657h116.806V481.69z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M144.921,223.48h-17.85v-17.85c0-6.696-5.428-12.124-12.124-12.124s-12.124,5.428-12.124,12.124v17.85h-17.85
+             c-6.696,0-12.124,5.429-12.124,12.124s5.428,12.124,12.124,12.124h17.85v17.851c0,6.696,5.428,12.124,12.124,12.124
+             s12.124-5.428,12.124-12.124v-17.851h17.85c6.696,0,12.124-5.429,12.124-12.124S151.617,223.48,144.921,223.48z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M286.573,223.48h-61.147c-6.696,0-12.124,5.429-12.124,12.124s5.428,12.124,12.124,12.124h61.147
+             c6.695,0,12.124-5.429,12.124-12.124S293.268,223.48,286.573,223.48z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M132.093,411.806l14.635-14.635c4.734-4.734,4.734-12.411,0-17.147c-4.734-4.733-12.411-4.733-17.147,0l-14.635,14.635
+             l-14.635-14.635c-4.734-4.733-12.411-4.733-17.147,0c-4.734,4.734-4.734,12.411,0,17.147L97.8,411.806l-14.635,14.635
+             c-4.734,4.734-4.734,12.411,0,17.145c2.368,2.367,5.47,3.551,8.573,3.551c3.102,0,6.206-1.184,8.573-3.551l14.635-14.635
+             l14.635,14.635c2.368,2.367,5.47,3.551,8.573,3.551s6.206-1.184,8.573-3.551c4.734-4.734,4.734-12.411,0-17.145L132.093,411.806z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M287.776,380.025c-4.736-4.733-12.41-4.733-17.147,0l-46.416,46.416c-4.733,4.734-4.733,12.411,0.001,17.147
+             c2.368,2.367,5.47,3.551,8.573,3.551s6.206-1.185,8.573-3.551l46.416-46.416C292.51,392.437,292.51,384.76,287.776,380.025z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <circle cx="232.787" cy="388.601" r="10.342" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <circle cx="279.209" cy="435.011" r="10.34" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M427.684,290.423h-61.971c-6.695,0-12.124,5.428-12.124,12.124c0,6.695,5.429,12.124,12.124,12.124h61.971
+             c6.695,0,12.124-5.429,12.124-12.124C439.808,295.851,434.38,290.423,427.684,290.423z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M427.684,332.739h-61.971c-6.695,0-12.124,5.429-12.124,12.124c0,6.695,5.429,12.124,12.124,12.124h61.971
+             c6.695,0,12.124-5.429,12.124-12.124C439.808,338.168,434.38,332.739,427.684,332.739z"
+                />
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+        </div>
+        <h2 class="title">Optymalizacja kosztów i dokumentacji kadrowej</h2>
+        <p class="description">
+          Dostosowanie najkorzystniejszych rozwiązań dla specyfiki Państwa
+          firmy, Tworzenie obwieszczeń i regulaminów pracy w przedsiębiorstwie,
+          audyt dokumentacji kadrowej.
+        </p>
+        <p class="show-more">Zobacz więcej →</p>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        effect: "fade",
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          // dynamicBullets: true,
+          type: "bullets",
+          clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        autoplay: {
+          delay: 3500,
+        },
+        // And if we need scrollbar
+      });
+    </script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>
