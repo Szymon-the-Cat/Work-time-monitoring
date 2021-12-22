@@ -155,6 +155,7 @@ body {
   row-gap: 5%;
   column-gap: 2%;
   background-color: #f8f8f8;
+  margin-bottom: 150px;
 }
 
 .about-company {
@@ -226,4 +227,109 @@ body {
   margin: 0 auto;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.news-wrapper {
+  display: grid;
+  grid-template-areas:
+    "title title title title"
+    "main main main small1"
+    "main main main small2"
+    "main main main small3";
+  row-gap: 10px;
+}
+
+.news__title {
+  grid-area: title;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 30px;
+  justify-self: center;
+}
+
+.post {
+  display: grid;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+  &:hover .post__title {
+    color: $main-color;
+  }
+}
+
+.post--main {
+  grid-area: main;
+  grid-template-areas:
+    "photo"
+    "title"
+    "text";
+  justify-items: center;
+  justify-self: right;
+  // padding: 0 100px 0 0;
+  border-right: 1px solid #ededed;
+}
+
+.post--small {
+  grid-template-areas: "photo text";
+  justify-content: left;
+  align-items: center;
+  border-bottom: 1px solid #ededed;
+}
+.post1 {
+  grid-area: small1;
+}
+
+.post2 {
+  grid-area: small2;
+}
+.post3 {
+  grid-area: small3;
+  border-bottom: none;
+}
+
+.post__img-link {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.post__img {
+  grid-area: photo;
+  width: 200px;
+  margin-left: 30px;
+  align-self: center;
+}
+
+.post__img--main {
+  width: 570px;
+  margin-bottom: 15px;
+  flex-basis: auto;
+  margin-right: 30px;
+}
+
+.text-wrapper {
+  grid-area: text;
+  margin-left: 30px;
+}
+
+.post__title {
+  grid-area: title;
+  font-size: 21px;
+  margin-bottom: 10px;
+  width: 50%;
+  line-height: 1.3;
+}
+
+.post__title--main {
+  width: 570px;
+  font-size: 27px;
+}
+
+.post__text {
+  width: 570px;
+}
+
+.date {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #696969;
 }
