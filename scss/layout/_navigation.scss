@@ -390,15 +390,67 @@ body {
 
 .contact__envelope {
   position: absolute;
-  top: -30px;
-  right: 15%;
-  width: 500px;
-  opacity: 0.5;
-  transform: rotate(-18deg);
-  fill: $main-color;
+  top: -10px;
+  right: 5%;
+  width: 400px;
+  opacity: 0.4;
+  transform: rotate(-15deg);
 }
 
 .footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  background-color: darken($main-color, 10%);
+  color: #f8f8f8;
   height: 300px;
-  background-color: #fff;
+  padding: 40px 30px;
+}
+
+.logo-footer {
+  flex-basis: 40%;
+}
+
+.logo-image-footer {
+  display: block;
+  margin: 0 auto;
+  height: 30%;
+}
+
+.footer__icon {
+  margin-right: 10px;
+}
+
+.contact-data {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-basis: 60%;
+  justify-content: space-evenly;
+}
+
+.footer__address {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.copyright {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.contact-data__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.foooter_address1 {
+  font-size: 18px;
+  font-weight: bold;
 }
