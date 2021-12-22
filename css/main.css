@@ -23,6 +23,20 @@ html {
   color: #333;
 }
 
+html::-webkit-scrollbar {
+  width: 16px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #229431;
+  border-radius: 100px;
+}
+
 body {
   min-height: 300vh;
   background-color: #f8f8f8;
