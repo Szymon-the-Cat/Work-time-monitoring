@@ -14,7 +14,7 @@ body {
   height: 70px;
   background-color: #fff;
   z-index: 2;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 0 10px 5px #00000012;
   transition: 0.3s;
 }
@@ -35,7 +35,7 @@ body {
   justify-content: end;
   align-items: center;
   list-style: none;
-  height: 50px;
+  // height: 40px;
 }
 
 .menu__item {
@@ -50,14 +50,22 @@ body {
 }
 
 .menu__item--contact {
-  padding: 10px 20px;
+  border-radius: 10px;
+  background: #56ab2f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #60961e,
+    $main-color
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #60961e,
+    $main-color
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 10px 30px;
   border: 2px solid $main-color;
-  border-radius: 20px;
   &:hover {
-    background-color: $main-color;
-  }
-  &:hover .menu__link--contact {
-    color: white;
+    background: #fff;
   }
 }
 
@@ -65,8 +73,12 @@ body {
   display: block;
   text-decoration: none;
   color: #333;
-  font-size: 21px;
+  font-size: 18px;
   transition: 0.25s;
+}
+
+.menu__link--contact {
+  color: #f8f8f8;
 }
 
 .swiper {
@@ -187,7 +199,19 @@ body {
   background-color: white;
   cursor: pointer;
   &:hover {
-    background-color: $main-color;
+    // background-color: $main-color;
+    background: #56ab2f; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to left,
+      #60961e,
+      $main-color
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to left,
+      #60961e,
+      $main-color
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     color: white;
     transform: translateY(-10px);
     .svg {
@@ -234,18 +258,22 @@ body {
 }
 
 .news-wrapper {
-  display: grid;
-  grid-template-areas:
-    "title title"
-    "main small1"
-    "main small2"
-    "main small3";
-  row-gap: 10px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post-main-wrapper {
+  flex-basis: 40%;
+}
+.post-small-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
 }
 
 .news__title {
-  grid-area: title;
+  flex-basis: 100%;
   text-align: center;
   margin-bottom: 40px;
   font-size: 30px;
@@ -253,7 +281,6 @@ body {
 }
 
 .post {
-  display: grid;
   text-decoration: none;
   color: #333;
   transition: 0.3s;
@@ -263,34 +290,17 @@ body {
 }
 
 .post--main {
-  grid-area: main;
-  grid-template-areas:
-    "photo"
-    "title"
-    "text";
-  justify-items: center;
   justify-self: right;
-  // padding: 0 100px 0 0;
   border-right: 1px solid #ededed;
 }
 
 .post--small {
-  // width: 500px;
+  display: grid;
+
   grid-template-areas: "photo text";
   justify-content: left;
   align-items: center;
-  border-bottom: 1px solid #ededed;
-}
-.post1 {
-  grid-area: small1;
-}
-
-.post2 {
-  grid-area: small2;
-}
-.post3 {
-  grid-area: small3;
-  border-bottom: none;
+  // border-bottom: 1px solid #ededed;
 }
 
 .post__img-link {
@@ -313,12 +323,10 @@ body {
 }
 
 .text-wrapper {
-  grid-area: text;
   margin-left: 30px;
 }
 
 .post__title {
-  grid-area: title;
   font-size: 21px;
   margin-bottom: 10px;
   width: 50%;
@@ -375,7 +383,19 @@ body {
   font-size: 14px;
   text-decoration: none;
   color: #f8f8f8;
-  background-color: $main-color;
+  // background-color: $main-color;
+  background: #56ab2f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #60961e,
+    $main-color
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #60961e,
+    $main-color
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   font-weight: bold;
   transition: 0.25s;
   cursor: pointer;
@@ -387,24 +407,36 @@ body {
   }
 }
 
-.contact__envelope {
+.contact__image {
   position: absolute;
   top: -10px;
   right: 5%;
-  width: 400px;
-  opacity: 0.4;
-  transform: rotate(-15deg);
+  width: 30%;
 }
 
 .footer {
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   position: relative;
-  background-color: darken($main-color, 10%);
+  // background-color: darken($main-color, 10%);
+  background: #56ab2f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #4e7a18,
+    darken($main-color, 15%)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #4c7718,
+    darken($main-color, 15%)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: #f8f8f8;
   height: 300px;
   padding: 40px 30px;
+  overflow: hidden;
 }
 
 .logo-footer {
@@ -452,4 +484,15 @@ body {
 .foooter_address1 {
   font-size: 18px;
   font-weight: bold;
+}
+
+.footer__image {
+  position: absolute;
+  right: 1.5%;
+  bottom: -55%;
+  width: 10%;
+}
+
+.footer__image-link {
+  width: 100%;
 }
