@@ -176,7 +176,7 @@ body {
   font-size: 36px;
 }
 
-.about-comapny-tacho {
+.about-company-tacho {
   color: $main-color;
 }
 
@@ -254,95 +254,77 @@ body {
 
 .news {
   background-color: #fff;
-  padding: 100px 0 100px;
 }
-
 .news-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 25px;
+  padding: 100px 0;
 }
 
-.post-main-wrapper {
-  flex-basis: 40%;
-}
-.post-small-wrapper {
+.main-post-wrapper {
+  flex-basis: 30%;
   display: flex;
   flex-direction: column;
-  flex-basis: 40%;
+  gap: 10px;
 }
 
 .news__title {
   flex-basis: 100%;
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 30px;
-  justify-self: center;
+  margin-bottom: 20px;
 }
 
-.post {
-  text-decoration: none;
-  color: #333;
-  transition: 0.3s;
-  &:hover .post__title {
-    color: $main-color;
-  }
-}
-
-.post--main {
-  justify-self: right;
-  border-right: 1px solid #ededed;
-}
-
-.post--small {
-  display: grid;
-
-  grid-template-areas: "photo text";
-  justify-content: left;
-  align-items: center;
-  // border-bottom: 1px solid #ededed;
-}
-
-.post__img-link {
+.main-post__img-link {
   width: 100%;
   border-radius: 10px;
 }
 
-.post__img {
-  grid-area: photo;
-  width: 200px;
-  margin-left: 30px;
-  align-self: center;
-}
-
-.post__img--main {
-  width: 570px;
-  margin-bottom: 15px;
-  flex-basis: auto;
-  margin-right: 30px;
-}
-
-.text-wrapper {
-  margin-left: 30px;
-}
-
-.post__title {
-  font-size: 21px;
-  margin-bottom: 10px;
-  width: 50%;
-  line-height: 1.3;
-}
-
-.post__title--main {
-  width: 570px;
+.main-post__title {
   font-size: 27px;
 }
 
-.post__text {
-  width: 570px;
+.main-post__text {
+  line-height: 1.4;
+  color: #696969;
 }
 
-.date {
+.small-posts-wrapper {
+  flex-basis: 30%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-left: 1px solid #ededed;
+}
+
+.small-post {
+  display: flex;
+  flex-basis: 27%;
+  gap: 15px;
+  justify-content: center;
+}
+
+.small-post--3 {
+  border-bottom: none;
+}
+
+.small-post__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+
+.small-post__img {
+  flex-basis: 40%;
+}
+
+.small-post__img-link {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.small-post__date {
   margin-bottom: 15px;
   font-size: 14px;
   color: #696969;
