@@ -268,6 +268,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover .main-post__title {
+    color: $main-color;
+  }
 }
 
 .news__title {
@@ -303,6 +308,11 @@ body {
   flex-basis: 27%;
   gap: 15px;
   justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover .small-post__title {
+    color: $main-color;
+  }
 }
 
 .small-post--3 {
