@@ -378,6 +378,7 @@ body {
       flex-basis: 100%;
   text-align: center;
   margin-bottom: 20px;
+  font-size: 30px;
 }
 
 .main-post__img-link {
@@ -407,6 +408,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 10px;
   border-left: 1px solid #ededed;
 }
 
