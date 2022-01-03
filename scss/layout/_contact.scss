@@ -1,0 +1,66 @@
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  gap: 30px;
+  overflow: hidden;
+  background-color: #f3f3f3;
+}
+
+.contact__title {
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contact__more {
+  font-size: 17px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.contact__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 60px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  color: #f8f8f8;
+  // background-color: $main-color;
+  background: #56ab2f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #60961e,
+    $main-color
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #60961e,
+    $main-color
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-weight: bold;
+  transition: 0.25s;
+  cursor: pointer;
+  box-shadow: 0 0 20px 5px #00000012;
+
+  &:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px 5px #00000030;
+  }
+}
+
+.contact__image {
+  position: absolute;
+  top: -10px;
+  right: 5%;
+  width: 30%;
+}

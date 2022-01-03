@@ -1,0 +1,82 @@
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  // background-color: darken($main-color, 10%);
+  background: #56ab2f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #4e7a18,
+    darken($main-color, 15%)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #4c7718,
+    darken($main-color, 15%)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #f8f8f8;
+  height: 300px;
+  padding: 40px 30px;
+  overflow: hidden;
+}
+
+.logo-footer {
+  flex-basis: 40%;
+}
+
+.logo-image-footer {
+  display: block;
+  margin: 0 auto;
+  height: 30%;
+}
+
+.footer__icon {
+  margin-right: 10px;
+}
+
+.contact-data {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-basis: 60%;
+  justify-content: space-evenly;
+}
+
+.footer__address {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.copyright {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.contact-data__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.foooter_address1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer__image {
+  position: absolute;
+  right: 1.5%;
+  bottom: -55%;
+  width: 10%;
+}
+
+.footer__image-link {
+  width: 100%;
+}
