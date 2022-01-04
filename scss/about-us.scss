@@ -109,18 +109,19 @@ body {
 }
 
 .certificates-wrapper {
-  margin-top: 100px;
+  margin: 100px 0;
 }
 
 .certificates-title {
+  margin-bottom: 30px;
   text-align: center;
   color: $main-color;
   font-size: 32px;
 }
 
 .splide {
-  height: 500px;
-  margin: 20px 0;
+  // min-height: 400px;
+  margin: 20px auto;
 }
 
 .splide__track {
@@ -153,13 +154,17 @@ body {
   background-position: center;
 }
 
-// .splide__arrow {
-//   width: 30px;
-//   height: 30px;
-//   & svg {
-//     fill: $main-color;
-//   }
-// }
+.splide__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.arrow-svg path {
+  fill: $main-color;
+}
 
 .splide-button-next {
   color: $main-color;
@@ -173,4 +178,22 @@ body {
 
 .splide__pagination__page.is-active {
   background-color: $main-color;
+}
+
+.splide {
+  position: relative;
+}
+
+.splide__arrow {
+  position: absolute;
+}
+
+.splide__arrow--prev {
+  top: 40%;
+  left: 140px;
+}
+
+.splide__arrow--next {
+  top: 40%;
+  right: 140px;
 }
