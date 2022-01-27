@@ -65,25 +65,21 @@
   }
   @media (max-width: 1300px) {
     grid-template-columns: repeat(2, 35%);
+    margin-bottom: 250px;
+  }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 40%);
     margin-bottom: 200px;
   }
 
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(2, 40%);
-    margin-bottom: 100px;
-  }
-
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(2, 40%);
-    margin-bottom: 100px;
-  }
   @media (max-width: 850px) {
     grid-template-columns: repeat(2, 45%);
-    margin-bottom: 150px;
   }
+
   @media (max-width: 700px) {
     grid-template-columns: 80%;
-    margin-bottom: 450px;
+    margin-bottom: 500px;
   }
 
   @media (max-width: 400px) {

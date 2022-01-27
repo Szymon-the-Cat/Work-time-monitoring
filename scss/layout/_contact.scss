@@ -8,12 +8,24 @@
   gap: 30px;
   overflow: hidden;
   background-color: #f3f3f3;
+  @media (max-width: 870px) {
+    padding-top: 40px;
+    justify-content: flex-start;
+    height: 430px;
+  }
+
+  @media (max-width: 450px) {
+    height: 450px;
+  }
 }
 
 .contact__title {
   font-size: 35px;
   text-align: center;
   font-weight: bold;
+  @media (max-width: 450px) {
+    padding: 0 20px;
+  }
 }
 
 .contact__more {
@@ -21,6 +33,12 @@
   text-align: center;
   font-weight: bold;
   margin-bottom: 30px;
+  @media (max-width: 870px) {
+    margin-bottom: 0;
+  }
+  @media (max-width: 450px) {
+    padding: 0 20px;
+  }
 }
 
 .contact__link {
@@ -56,6 +74,11 @@
     transform: scale(1.2);
     box-shadow: 0 0 20px 5px #00000030;
   }
+  @media (max-width: 870px) {
+    width: 200px;
+    height: 70px;
+    font-size: 24px;
+  }
 }
 
 .contact__image {
@@ -66,11 +89,15 @@
   @media (max-width: 1350px) {
     top: 60px;
   }
-  @media (max-width: 800px) {
-    top: 140px;
+  @media (max-width: 870px) {
+    top: 22%;
+    left: 32%;
+    width: 38%;
   }
 
   @media (max-width: 450px) {
-    top: 160px;
+    top: 32%;
+    left: 24%;
+    width: 53%;
   }
 }
