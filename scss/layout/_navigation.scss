@@ -31,11 +31,17 @@ body {
 .logo__image {
   margin-left: 15px;
   height: 50px;
+  @media (max-width: 1000px) {
+    height: 40px;
+  }
+  @media (max-width: 400px) {
+    height: 30px;
+  }
 }
 
 .menu {
   display: flex;
-  @media (max-width: 1050px) {
+  @media (max-width: 1000px) {
     position: fixed;
     bottom: 100%;
     left: 0;
@@ -45,8 +51,8 @@ body {
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: #ffffffda;
-    transition: 0.9s;
+    background-color: rgba(255, 255, 255, 0.92);
+    transition: 0.5s;
   }
 }
 
@@ -55,7 +61,7 @@ body {
   justify-content: end;
   align-items: center;
   list-style: none;
-  @media (max-width: 1050px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
     gap: 40px;
   }
@@ -98,7 +104,7 @@ body {
   color: #333;
   font-size: 18px;
   transition: 0.25s;
-  @media (max-width: 1050px) {
+  @media (max-width: 1000px) {
     font-weight: 700;
     font-size: 30px;
   }
@@ -116,12 +122,12 @@ body {
   border: none;
   background: none;
   cursor: pointer;
-  @media (max-width: 1050px) {
+  @media (max-width: 1000px) {
     display: block;
   }
 }
 .btn-mobile-nav__icon {
-  font-size: 40px;
+  font-size: 27px;
 }
 
 .hidden {
@@ -131,7 +137,7 @@ body {
   position: relative;
   z-index: 999;
 }
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
   .active {
     bottom: 0;
   }

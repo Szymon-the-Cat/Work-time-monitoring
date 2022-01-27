@@ -63,4 +63,14 @@
   top: -10px;
   right: 5%;
   width: 30%;
+  @media (max-width: 1350px) {
+    top: 60px;
+  }
+  @media (max-width: 800px) {
+    top: 140px;
+  }
+
+  @media (max-width: 450px) {
+    top: 160px;
+  }
 }

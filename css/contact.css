@@ -85,13 +85,25 @@ body {
   height: 50px;
 }
 
+@media (max-width: 1000px) {
+  .logo__image {
+    height: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo__image {
+    height: 30px;
+  }
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
   .menu {
     position: fixed;
     bottom: 100%;
@@ -109,9 +121,9 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #ffffffda;
-    -webkit-transition: 0.9s;
-    transition: 0.9s;
+    background-color: rgba(255, 255, 255, 0.92);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
 }
 
@@ -128,7 +140,7 @@ body {
   list-style: none;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
   .menu__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -179,7 +191,7 @@ body {
   transition: 0.25s;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
   .menu__link {
     font-weight: 700;
     font-size: 30px;
@@ -201,14 +213,14 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
   .btn-mobile-nav {
     display: block;
   }
 }
 
 .btn-mobile-nav__icon {
-  font-size: 40px;
+  font-size: 27px;
 }
 
 .hidden {
@@ -220,7 +232,7 @@ body {
   z-index: 999;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
   .active {
     bottom: 0;
   }
@@ -305,6 +317,24 @@ body {
   width: 30%;
 }
 
+@media (max-width: 1350px) {
+  .contact__image {
+    top: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact__image {
+    top: 140px;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact__image {
+    top: 160px;
+  }
+}
+
 .footer {
   position: relative;
   display: -webkit-box;
@@ -334,10 +364,23 @@ body {
       flex-basis: 40%;
 }
 
+@media (max-width: 1025px) {
+  .logo-footer {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+}
+
 .logo-image-footer {
   display: block;
   margin: 0 auto;
   height: 30%;
+}
+
+@media (max-width: 1025px) {
+  .logo-image-footer {
+    height: 50px;
+  }
 }
 
 .footer__icon {
@@ -364,6 +407,13 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+@media (max-width: 1025px) {
+  .footer-wrap {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
 }
 
 .footer__address {
@@ -398,6 +448,13 @@ body {
   right: 1.5%;
   bottom: -55%;
   width: 10%;
+}
+
+@media (max-width: 1450px) {
+  .footer__image {
+    bottom: -65%;
+    right: 3.5%;
+  }
 }
 
 .footer__image-link {

@@ -25,12 +25,18 @@
 
 .logo-footer {
   flex-basis: 40%;
+  @media (max-width: 1025px) {
+    flex-basis: 20%;
+  }
 }
 
 .logo-image-footer {
   display: block;
   margin: 0 auto;
   height: 30%;
+  @media (max-width: 1025px) {
+    height: 50px;
+  }
 }
 
 .footer__icon {
@@ -47,6 +53,9 @@
   display: flex;
   flex-basis: 60%;
   justify-content: space-evenly;
+  @media (max-width: 1025px) {
+    flex-basis: 80%;
+  }
 }
 
 .footer__address {
@@ -75,6 +84,10 @@
   right: 1.5%;
   bottom: -55%;
   width: 10%;
+  @media (max-width: 1450px) {
+    bottom: -65%;
+    right: 3.5%;
+  }
 }
 
 .footer__image-link {
