@@ -25,9 +25,8 @@ $gray-color: #343a40;
 html {
   font-family: "Lato";
   background-color: rgb(243, 243, 243);
-  color: #333;
-  // scrollbar-width: 16px;
-  // scrollbar-color: $main-color darken($main-color, 30%);
+  color: #030f05;
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar {

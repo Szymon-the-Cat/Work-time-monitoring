@@ -20,7 +20,8 @@ GREY COLOR: #343a40
 html {
   font-family: "Lato";
   background-color: #f3f3f3;
-  color: #333;
+  color: #030f05;
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar {
@@ -67,15 +68,51 @@ body {
   transition: 0.3s;
 }
 
+@media (max-width: 1300px) {
+  .main-header {
+    padding: 0 30px 0 20px;
+  }
+}
+
 .scrolling-active {
   top: 0;
   width: 100%;
   border-radius: 0;
 }
 
-.logo-image {
+.logo__image {
   margin-left: 15px;
   height: 50px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1050px) {
+  .menu {
+    position: fixed;
+    bottom: 100%;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    height: 100vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #ffffffda;
+    -webkit-transition: 0.9s;
+    transition: 0.9s;
+  }
 }
 
 .menu__list {
@@ -89,6 +126,16 @@ body {
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
+}
+
+@media (max-width: 1050px) {
+  .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+  }
 }
 
 .menu__item {
@@ -132,8 +179,51 @@ body {
   transition: 0.25s;
 }
 
+@media (max-width: 1050px) {
+  .menu__link {
+    font-weight: 700;
+    font-size: 30px;
+  }
+}
+
 .menu__link--contact {
   color: #f8f8f8;
+}
+
+.menu__link--contact:hover {
+  color: #229431;
+}
+
+.btn-mobile-nav {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+  .btn-mobile-nav {
+    display: block;
+  }
+}
+
+.btn-mobile-nav__icon {
+  font-size: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.btnn {
+  position: relative;
+  z-index: 999;
+}
+
+@media (max-width: 1050px) {
+  .active {
+    bottom: 0;
+  }
 }
 
 .contact {
@@ -471,7 +561,8 @@ body {
 
 .swiper-slide__img {
   width: 60%;
-  border-radius: 30px;
+  border-radius: 40px;
+  overflow: hidden;
 }
 
 .slide-1 {

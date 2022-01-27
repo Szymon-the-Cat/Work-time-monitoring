@@ -1,0 +1,140 @@
+@import "variables";
+@import "base";
+@import "layout/navigation";
+@import "layout/contact";
+@import "layout/footer";
+
+.main-img-wrapper {
+  position: relative;
+  height: 70vh;
+  top: -70px;
+  left: 0;
+  overflow: hidden;
+}
+
+.main-img__photo {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  padding: 20px;
+  border: 2px solid $main-color;
+  border-radius: 50%;
+  margin: 0 20px 0 0;
+  transition: 0.3s;
+  fill: $main-color;
+}
+
+.svg__link {
+  fill: $main-color;
+}
+
+.svg__money {
+  stroke: $main-color;
+}
+.svg__color {
+  stroke: $main-color;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(3, 25%);
+  justify-content: center;
+  row-gap: 5%;
+  column-gap: 2%;
+  background-color: #f8f8f8;
+  margin-bottom: 150px;
+}
+
+.about-company {
+  position: relative;
+  grid-column: 1/-1;
+  grid-row: 1;
+  font-size: 36px;
+}
+
+.about-company-tacho {
+  color: $main-color;
+}
+
+.about-company-offer {
+  grid-column: 1/-1;
+  grid-row: 2;
+  font-size: 19.5px;
+}
+
+.element {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+  padding: 20px 30px 20px;
+  box-shadow: 0 0 10px 5px #00000012;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: white;
+  cursor: pointer;
+  &:hover {
+    // background-color: $main-color;
+    background: #56ab2f; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to left,
+      #60961e,
+      $main-color
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to left,
+      #60961e,
+      $main-color
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: white;
+    transform: translateY(-10px);
+    .svg {
+      stroke: white;
+      border-color: white;
+    }
+    .svg__link {
+      fill: white;
+    }
+    .svg__money {
+      stroke: white;
+    }
+    .svg__color {
+      stroke: white;
+    }
+  }
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  flex-basis: 50%;
+}
+
+.description {
+  padding: 0 30px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.show-more {
+  padding: 10px 15px 0;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5;
+}

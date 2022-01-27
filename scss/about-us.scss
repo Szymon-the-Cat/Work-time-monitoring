@@ -134,8 +134,10 @@ body {
 
 .swiper-slide__img {
   width: 60%;
-  border-radius: 30px;
+  border-radius: 40px;
+  overflow: hidden;
 }
+
 .slide-1 {
   background-size: cover;
   background-repeat: no-repeat;
