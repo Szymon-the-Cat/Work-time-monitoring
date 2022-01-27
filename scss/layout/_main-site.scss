@@ -178,6 +178,12 @@
   justify-content: center;
   gap: 25px;
   padding: 100px 0;
+  @media (max-width: 1050px) {
+    gap: 13px;
+  }
+  @media (max-width: 980px) {
+    flex-direction: column;
+  }
 }
 
 .main-post-wrapper {
@@ -193,6 +199,21 @@
   @media (max-width: 1450px) {
     flex-basis: 35%;
   }
+  @media (max-width: 980px) {
+    display: grid;
+    grid-template-areas:
+      "photo photo title"
+      "photo photo text";
+    width: 90%;
+    margin: 0 auto 30px;
+  }
+  @media (max-width: 800px) {
+    grid-template-areas:
+      "photo photo photo"
+      "photo photo photo"
+      "title title title"
+      "text text text";
+  }
 }
 
 .news__title {
@@ -202,6 +223,12 @@
   font-size: 30px;
 }
 
+@media (max-width: 980px) {
+  .main-post__img {
+    grid-area: photo;
+  }
+}
+
 .main-post__img-link {
   width: 100%;
   border-radius: 10px;
@@ -209,11 +236,19 @@
 
 .main-post__title {
   font-size: 27px;
+  @media (max-width: 980px) {
+    grid-area: title;
+    width: 100%;
+  }
 }
 
 .main-post__text {
   line-height: 1.4;
   color: #696969;
+  @media (max-width: 980px) {
+    grid-area: text;
+    width: 100%;
+  }
 }
 
 .small-posts-wrapper {
@@ -226,6 +261,14 @@
   @media (max-width: 1450px) {
     flex-basis: 35%;
   }
+  @media (max-width: 980px) {
+    flex-basis: 15%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+    border: none;
+    flex-wrap: wrap;
+  }
 }
 
 .small-post {
@@ -237,6 +280,21 @@
   transition: 0.3s;
   &:hover .small-post__title {
     color: $main-color;
+  }
+  @media (max-width: 980px) {
+    flex-direction: column;
+  }
+  @media (max-width: 550px) {
+    flex-basis: 90%;
+    margin-bottom: 45px;
+  }
+}
+.small-post__title {
+  @media (max-width: 1050px) {
+    font-size: 15px;
+  }
+  @media (max-width: 550px) {
+    font-size: 18px;
   }
 }
 
@@ -251,7 +309,10 @@
 }
 
 .small-post__img {
-  flex-basis: 40%;
+  flex-basis: 50%;
+  @media (max-width: 1050px) {
+    flex-basis: 60%;
+  }
 }
 
 .small-post__img-link {
@@ -263,4 +324,8 @@
   margin-bottom: 15px;
   font-size: 14px;
   color: #696969;
+  @media (max-width: 1050px) {
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
 }
