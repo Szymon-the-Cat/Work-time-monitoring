@@ -649,6 +649,12 @@ body {
   margin-bottom: 100px;
 }
 
+@media (max-width: 700px) {
+  .features-description-2 {
+    font-size: 21px;
+  }
+}
+
 .features-description-3 {
   text-align: center;
   color: #229431;

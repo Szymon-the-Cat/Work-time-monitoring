@@ -682,6 +682,7 @@ body {
   height: 120px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  overflow: hidden;
 }
 
 .element {
@@ -710,16 +711,18 @@ body {
   cursor: pointer;
 }
 
-.element:hover {
-  background: #56ab2f;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(#60961e), to(#229431));
-  background: linear-gradient(to left, #60961e, #229431);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: white;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+@media (min-width: 1001px) {
+  .element:hover {
+    background: #56ab2f;
+    /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, right top, left top, from(#60961e), to(#229431));
+    background: linear-gradient(to left, #60961e, #229431);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
 }
 
 @media (max-width: 1450px) {

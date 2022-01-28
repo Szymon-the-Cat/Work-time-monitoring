@@ -51,6 +51,9 @@ body {
 
 .features-description-2 {
   margin-bottom: 100px;
+  @media (max-width: 700px) {
+    font-size: 21px;
+  }
 }
 
 .features-description-3 {

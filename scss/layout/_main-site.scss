@@ -10,6 +10,21 @@
     align-items: center;
     font-size: 60px;
   }
+  @media (max-width: 1026px) {
+    height: 78vh;
+  }
+  @media (max-width: 870px) {
+    height: 70vh;
+  }
+  @media (max-width: 680px) {
+    height: 56vh;
+  }
+  @media (max-width: 550px) {
+    height: 52vh;
+  }
+  @media (max-width: 410px) {
+    height: 48vh;
+  }
 }
 
 .slide-1 {
@@ -45,6 +60,10 @@
   height: 20px;
   width: 20px;
   border: 2px solid #ddd;
+  @media (max-width: 1001px) {
+    height: 15px;
+    width: 15px;
+  }
 }
 
 .swiper-pagination-bullet-active {
@@ -111,6 +130,7 @@
   width: 120px;
   height: 120px;
   transition: 0.3s;
+  overflow: hidden;
 }
 
 .element {
@@ -125,22 +145,24 @@
   transition: 0.3s;
   background-color: white;
   cursor: pointer;
-  &:hover {
-    // background-color: $main-color;
-    background: #56ab2f; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to left,
-      #60961e,
-      $main-color
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to left,
-      #60961e,
-      $main-color
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  @media (min-width: 1001px) {
+    &:hover {
+      // background-color: $main-color;
+      background: #56ab2f; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to left,
+        #60961e,
+        $main-color
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to left,
+        #60961e,
+        $main-color
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    color: white;
-    transform: translateY(-10px);
+      color: white;
+      transform: translateY(-10px);
+    }
   }
   @media (max-width: 1450px) {
     padding: 20px 14px 20px;
