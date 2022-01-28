@@ -19,6 +19,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/contact.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <header class="main-header">
@@ -77,38 +78,76 @@
             </div>
           </div>
           <div class="contact-form-wrapper">
-            <form>
+            <form class="form">
               <h2>Formularz kontaktowy</h2>
               <div class="form-wrap">
-                <input class="input-item" type="text" id="name" required />
-                <label for="name">Imię i nazwisko</label>
+                <input
+                  placeholder=" "
+                  class="input-item"
+                  type="text"
+                  id="name"
+                  required
+                />
+                <label class="input-item__label" for="name"
+                  >Imię i nazwisko</label
+                >
               </div>
               <div class="form-wrap">
-                <input class="input-item" type="email" id="email" required />
-                <label for="email">E-mail</label>
+                <input
+                  placeholder=" "
+                  class="input-item"
+                  type="email"
+                  id="email"
+                  required
+                />
+                <label class="input-item__label" for="email">E-mail</label>
               </div>
               <div class="form-wrap">
-                <input class="input-item" type="text" id="subject" required />
-                <label for="subject">Temat wiadomości</label>
+                <input
+                  placeholder=" "
+                  class="input-item"
+                  type="text"
+                  id="subject"
+                  required
+                />
+                <label class="input-item__label" for="subject"
+                  >Temat wiadomości</label
+                >
               </div>
               <div class="form-wrap">
                 <textarea
-                  class="input-item"
+                  placeholder=" "
+                  class="input-item input-item--textarea"
                   id="message"
-                  rows="4"
+                  rows="7"
                   required
                 ></textarea>
-                <label for="message">Treść wiadomości</label>
+                <label class="input-item__label" for="message"
+                  >Treść wiadomości</label
+                >
               </div>
-              <input type="checkbox" id="permission" required />
-              <label for="permission"
-                >Wyrażam zgodę na przetwarzanie przez EOS Piotr Puchała moich
-                danych osobowych zawartych w formularzu w celu otrzymywania
-                materiałów marketingowych. Aby zmienić lub usunąć twoje dane
-                osobowe, napisz na adres: puchalapiotr1@gmail.com</label
-              >
-              <div class="form-wrap">
-                <button id="form-submit" type="submit">Wyślij</button>
+              <div class="form-wrap form-wrap--checkbox">
+                <input
+                  class="input-checkbox"
+                  type="checkbox"
+                  id="permission"
+                  required
+                />
+                <label for="permission" class="input-checkbox-label"
+                  >Wyrażam zgodę na przetwarzanie przez EOS Piotr Puchała moich
+                  danych osobowych zawartych w formularzu w celu otrzymywania
+                  materiałów marketingowych. Aby zmienić lub usunąć twoje dane
+                  osobowe, napisz na adres: puchalapiotr1@gmail.com</label
+                >
+              </div>
+              <div class="form-wrap form-wrap-submit">
+                <button class="form-btn-submit" id="form-submit" type="submit">
+                  Wyślij
+                </button>
+                <div
+                  class="g-recaptcha"
+                  data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                ></div>
               </div>
             </form>
           </div>
@@ -136,13 +175,12 @@
       })();
     </script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- User ID     user_D1LUAjPyX4V1X2L5g1WZG -->
-    <!-- Access Token     b9a1a66c2138a88bcaad7a7194da0537 -->
     <script>
       const name = document.getElementById("name");
       const email = document.getElementById("email");
       const subject = document.getElementById("subject");
       const message = document.getElementById("message");
+      const checkboxEl = document.getElementById("permission");
       const submitBtn = document.getElementById("form-submit");
 
       const success = function () {
@@ -150,6 +188,15 @@
           title: "Wiadomość wysłana pomyślnie!",
           text: "Dziękujemy za skontaktowanie się z nami, potrzebujemy kilku godzin aby odpowiedzieć na Państwa pytania. W pilnych sprawach prosimy o kontakt drogą telefoniczną.",
           icon: "success",
+          button: "OK",
+        });
+      };
+
+      const inputEmpty = function () {
+        swal({
+          title: "O czymś zapomniałeś",
+          text: "Uzupełnij wszystkie pola formularza",
+          icon: "error",
           button: "OK",
         });
       };
@@ -165,9 +212,25 @@
 
       submitBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        success();
-        sendMail();
+        if (
+          name.value == "" ||
+          email.value == "" ||
+          subject.value == "" ||
+          message.value == "" ||
+          checkboxEl.checked == false
+        ) {
+          inputEmpty();
+        } else {
+          success();
+          sendMail(name.value, email.value, subject.value, message.value);
+          name.value = "";
+          email.value = "";
+          subject.value = "";
+          message.value = "";
+          checkboxEl.checked = false;
+        }
       });
     </script>
+    <script src="js/sendmail.js"></script>
   </body>
 </html>
