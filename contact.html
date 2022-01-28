@@ -19,16 +19,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/contact.css" />
-    <script src="js/sendmail.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("user_D1LUAjPyX4V1X2L5g1WZG");
-      })();
-    </script>
   </head>
   <body>
     <header class="main-header">
@@ -118,7 +108,7 @@
                 osobowe, napisz na adres: puchalapiotr1@gmail.com</label
               >
               <div class="form-wrap">
-                <button onclick="sendMail()" type="submit">Wyślij</button>
+                <button id="form-submit" type="submit">Wyślij</button>
               </div>
             </form>
           </div>
@@ -136,5 +126,48 @@
     </footer>
 
     <script src="js/menu.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_D1LUAjPyX4V1X2L5g1WZG");
+      })();
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- User ID     user_D1LUAjPyX4V1X2L5g1WZG -->
+    <!-- Access Token     b9a1a66c2138a88bcaad7a7194da0537 -->
+    <script>
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const subject = document.getElementById("subject");
+      const message = document.getElementById("message");
+      const submitBtn = document.getElementById("form-submit");
+
+      const success = function () {
+        swal({
+          title: "Wiadomość wysłana pomyślnie!",
+          text: "Dziękujemy za skontaktowanie się z nami, potrzebujemy kilku godzin aby odpowiedzieć na Państwa pytania. W pilnych sprawach prosimy o kontakt drogą telefoniczną.",
+          icon: "success",
+          button: "OK",
+        });
+      };
+
+      function sendMail(name, email, subject, message) {
+        emailjs.send("service_kjoll2s", "template_igsx5mn", {
+          name: name,
+          mail: email,
+          title: subject,
+          message: message,
+        });
+      }
+
+      submitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        success();
+        sendMail();
+      });
+    </script>
   </body>
 </html>
