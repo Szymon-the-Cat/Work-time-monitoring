@@ -36,6 +36,89 @@
   min-height: 100%;
 }
 
+.contact-section-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+// .contact__title {
+// }
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  column-gap: 5%;
+}
+
+.contact__title {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.contact-info__title {
+  margin-bottom: 15px;
+  color: $main-color;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.mail,
+.phone {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.phone {
+  margin-bottom: 30px;
+}
+
+.phone__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.company-name,
+.google-maps,
+.address {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: $gray-color;
+}
+
+.google-maps {
+  margin-top: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.google-maps__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fa-map-marker-alt {
+  margin-right: 5px;
+}
+
 .footer {
   justify-content: left;
+}
+
+.input-item {
+  margin-bottom: 5px;
+  padding-right: 0;
+  padding-left: 0;
+  border-style: none none solid;
+  border-width: 1px;
+  border-color: #000 #000 #bdc2c5;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  font-weight: 300;
+  &:focus {
+    border-color: #000 #000 $main-color;
+  }
 }

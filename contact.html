@@ -12,7 +12,23 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/contact.css" />
+    <script src="js/sendmail.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_D1LUAjPyX4V1X2L5g1WZG");
+      })();
+    </script>
   </head>
   <body>
     <header class="main-header">
@@ -46,7 +62,69 @@
     <div class="main-img-wrapper">
       <img src="assets/1.jpg" alt="" class="main-img__photo" />
     </div>
-
+    <section class="contact-section">
+      <div class="contact-section-wrapper">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h2 class="contact-info__title">Nasze dane:</h2>
+            <p class="mail">puchalapiotr1@gmail.com</p>
+            <p class="phone">
+              <a class="phone__link" href="tel:+48509770020"
+                >+48 509-77-00-20</a
+              >
+            </p>
+            <p class="company-name">EOS Piotr Puchała</p>
+            <p class="address">ul. Kasztanowa 81</p>
+            <p class="address">32-085 Modlniczka k. Krakowa</p>
+            <div class="google-maps">
+              <a
+                target="_blank"
+                class="google-maps__link"
+                href="https://www.google.com/maps/place/Kasztanowa+81,+32-085+Modlniczka/@50.1133608,19.8320417,17z/data=!3m1!4b1!4m5!3m4!1s0x471659b48cdca72b:0x35749181e725f53e!8m2!3d50.1133608!4d19.8342304"
+              >
+                <i class="fas fa-map-marker-alt"></i> Zobacz na mapie</a
+              >
+            </div>
+          </div>
+          <div class="contact-form-wrapper">
+            <form>
+              <h2>Formularz kontaktowy</h2>
+              <div class="form-wrap">
+                <input class="input-item" type="text" id="name" required />
+                <label for="name">Imię i nazwisko</label>
+              </div>
+              <div class="form-wrap">
+                <input class="input-item" type="email" id="email" required />
+                <label for="email">E-mail</label>
+              </div>
+              <div class="form-wrap">
+                <input class="input-item" type="text" id="subject" required />
+                <label for="subject">Temat wiadomości</label>
+              </div>
+              <div class="form-wrap">
+                <textarea
+                  class="input-item"
+                  id="message"
+                  rows="4"
+                  required
+                ></textarea>
+                <label for="message">Treść wiadomości</label>
+              </div>
+              <input type="checkbox" id="permission" required />
+              <label for="permission"
+                >Wyrażam zgodę na przetwarzanie przez EOS Piotr Puchała moich
+                danych osobowych zawartych w formularzu w celu otrzymywania
+                materiałów marketingowych. Aby zmienić lub usunąć twoje dane
+                osobowe, napisz na adres: puchalapiotr1@gmail.com</label
+              >
+              <div class="form-wrap">
+                <button onclick="sendMail()" type="submit">Wyślij</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
       <a class="logo logo-footer" href="index.html"
         ><img
@@ -56,6 +134,7 @@
       /></a>
       <div class="copyright">Copyright &copy 2022 by Szymon Osowski</div>
     </footer>
+
     <script src="js/menu.js"></script>
   </body>
 </html>
