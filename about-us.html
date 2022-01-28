@@ -182,12 +182,19 @@
     <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
     <script src="splide-3.6.9/dist/js/splide.min.js"></script>
     <script>
+     
+
+     let perPagenumber = 1;
+     if (window.outerWidth > 1000) perPagenumber = 3;
+     
  document.addEventListener( 'DOMContentLoaded', function() {
     var splide = new Splide( '.splide', {
-      perPage: 3,
+      perPage: perPagenumber,
     } );
     splide.mount();
   } );
+  
+
     </script>
     <script>
       lightbox.option({
