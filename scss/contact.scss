@@ -48,6 +48,17 @@
   display: flex;
   justify-content: center;
   column-gap: 5%;
+  @media (max-width: 1001px) {
+    flex-direction: column;
+    row-gap: 5%;
+    align-items: center;
+  }
+}
+
+.contact-info {
+  @media (max-width: 1001px) {
+    margin-bottom: 60px;
+  }
 }
 
 .contact__title {
@@ -184,9 +195,14 @@
 }
 
 .form-wrap-submit {
+  display: flex;
   width: 400px;
   height: 50px;
   margin-bottom: 70px;
+}
+
+.g-recaptcha {
+  transform: scale(0.77);
 }
 
 .form-btn-submit {
