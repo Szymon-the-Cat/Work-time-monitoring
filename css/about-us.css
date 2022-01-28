@@ -587,16 +587,51 @@ body {
   width: 100%;
 }
 
+.footer-phone {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   background-color: #fff;
 }
 
 .main-img-wrapper {
   position: relative;
-  height: 70vh;
+  height: 75vh;
   top: -70px;
   left: 0;
   overflow: hidden;
+}
+
+@media (max-width: 1026px) {
+  .main-img-wrapper {
+    height: 78vh;
+  }
+}
+
+@media (max-width: 870px) {
+  .main-img-wrapper {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 680px) {
+  .main-img-wrapper {
+    height: 56vh;
+  }
+}
+
+@media (max-width: 550px) {
+  .main-img-wrapper {
+    height: 52vh;
+  }
+}
+
+@media (max-width: 410px) {
+  .main-img-wrapper {
+    height: 48vh;
+  }
 }
 
 .main-img__photo {

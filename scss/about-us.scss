@@ -10,10 +10,25 @@ body {
 
 .main-img-wrapper {
   position: relative;
-  height: 70vh;
+  height: 75vh;
   top: -70px;
   left: 0;
   overflow: hidden;
+  @media (max-width: 1026px) {
+    height: 78vh;
+  }
+  @media (max-width: 870px) {
+    height: 70vh;
+  }
+  @media (max-width: 680px) {
+    height: 56vh;
+  }
+  @media (max-width: 550px) {
+    height: 52vh;
+  }
+  @media (max-width: 410px) {
+    height: 48vh;
+  }
 }
 
 .main-img__photo {
