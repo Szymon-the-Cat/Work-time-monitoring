@@ -38,43 +38,6 @@ function sendMail(name, email, subject, message) {
   });
 }
 
-classList.add("input-item--empty");
-classList.remove("input-item--empty");
-
-function checkInputs() {
-  if (nameValue === "") {
-    nameEl.classList.add("input-item--empty");
-  } else {
-    classList.remove("input-item--empty");
-  }
-
-  if (emailValue === "") {
-    email.classList.add("input-item--empty");
-  } else {
-    email.classList.remove("input-item--empty");
-  }
-  if (subjectValue === "") {
-    setErrorFor(subject);
-  } else {
-    setSuccessFor(subject);
-  }
-  if (messageValue === "") {
-    setErrorFor(message);
-  } else {
-    setSuccessFor(message);
-  }
-  if (checkboxEl.checked === false) {
-    errorCheckbox(checkboxEl);
-  } else {
-    successCheckbox(checkboxEl);
-  }
-}
-
-nameEl.addEventListener("input", setSuccessFor);
-email.addEventListener("input", setSuccessFor);
-subject.addEventListener("input", setSuccessFor);
-message.addEventListener("input", setSuccessFor);
-
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (
