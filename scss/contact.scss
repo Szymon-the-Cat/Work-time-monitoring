@@ -39,18 +39,24 @@
 .contact-section-wrapper {
   width: 80%;
   margin: 0 auto;
+  @media (max-width: 1025px) {
+    width: 100%;
+  }
 }
-
-// .contact__title {
-// }
 
 .contact-wrapper {
   display: flex;
   justify-content: center;
   column-gap: 5%;
-  @media (max-width: 1001px) {
+  @media (max-width: 1025px) {
+    gap: 8%;
+  }
+  @media (max-width: 950px) {
+    padding: 0 50px;
+    gap: 4%;
+  }
+  @media (max-width: 670px) {
     flex-direction: column;
-    row-gap: 5%;
     align-items: center;
   }
 }
@@ -64,6 +70,9 @@
 .contact__title {
   font-size: 50px;
   font-weight: 700;
+  @media (max-width: 780px) {
+    font-size: 40px;
+  }
 }
 
 .contact-info__title {
@@ -71,6 +80,9 @@
   color: $main-color;
   font-size: 40px;
   font-weight: 700;
+  @media (max-width: 780px) {
+    font-size: 30px;
+  }
 }
 
 .mail,
@@ -78,6 +90,9 @@
   margin-bottom: 10px;
   font-size: 30px;
   font-weight: 700;
+  @media (max-width: 780px) {
+    font-size: 20px;
+  }
 }
 
 .phone {
@@ -119,6 +134,11 @@
   justify-content: left;
 }
 
+.form-title {
+  @media (max-width: 670px) {
+    text-align: center;
+  }
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -154,6 +174,9 @@
     border-color: $main-color;
     color: $main-color;
   }
+  @media (max-width: 950px) {
+    width: 300px;
+  }
 }
 .input-item--textarea {
   padding-top: 20px;
@@ -171,22 +194,36 @@
   font-size: 14px;
 }
 
+.input-item--empty {
+  border-color: rgb(163, 37, 37);
+}
+
 .form-wrap--checkbox {
   display: flex;
   align-items: center;
   width: 400px;
   font-size: 12px;
   margin-top: -30px;
+  @media (max-width: 950px) {
+    width: 300px;
+  }
 }
 .input-checkbox {
   flex-basis: 10%;
   width: 25px;
   height: 25px;
   cursor: pointer;
+  @media (max-width: 950px) {
+    margin-right: 10px;
+  }
 
   &:checked {
     accent-color: $main-color;
   }
+}
+
+.checkcheck {
+  accent-color: blue;
 }
 
 .input-checkbox-label {
@@ -199,13 +236,25 @@
   width: 400px;
   height: 50px;
   margin-bottom: 70px;
+  gap: 20px;
+  @media (max-width: 950px) {
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 180px;
+  }
 }
 
 .g-recaptcha {
   transform: scale(0.77);
+  -webkit-transform: scal(0.77);
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
 }
 
 .form-btn-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   cursor: pointer;
   background: #56ab2f; /* fallback for old browsers */
@@ -219,7 +268,7 @@
     #60961e,
     $main-color
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding: 18px 89px;
+  padding: 18px 48px;
   border: 2px solid $main-color;
   color: #f8f8f8;
   transition: 0.3s;
